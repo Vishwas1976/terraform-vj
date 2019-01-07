@@ -6,7 +6,9 @@ node{
             echo "the second stage"
         }
 
-
+ stage ("third stage") {
+            echo "the second stage"
+        }
     
 
 }
