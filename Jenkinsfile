@@ -1,6 +1,5 @@
 node{
-    stages{
-        stage ("firststage") {
+            stage ("firststage") {
                 echo "thefirststage"
         }
         stage ("second stage") {
@@ -8,6 +7,6 @@ node{
         }
 
 
-    }
+    
 
 }
