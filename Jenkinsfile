@@ -1,29 +1,26 @@
-pipeline
-{
-    agent any
- stages{
-
-         stage ("firststage") 
-                {
-                steps {echo "thefirststage" 
-                }
-                when {
-                    branch 'master'
-                }
-                }
-        
-        stage ("second stage") 
-        {
-            steps {
-            echo "the second stage"}
+pipeline {
+  agent any
+  stages {
+    stage('firststage') {
+      steps {
+        echo 'thefirststage'
+        echo "${JAVA_HOME}"
+        withEnv(overrides: JAVA_HOME)
+        when {
+            branch 'master'
+            
         }
-
- stage ("third stage") 
-        {
-     steps {
-            echo "the second stage"
-           }
-        }
- }
-
-}   
+      }
+    }
+    stage('second stage') {
+      steps {
+        echo 'the second stage'
+      }
+    }
+    stage('third stage') {
+      steps {
+        echo 'the second stage'
+      }
+    }
+  }
+}
