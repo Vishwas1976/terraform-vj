@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'thefirststage'
         echo "${JAVA_HOME}"
-        withEnv(overrides: JAVA_HOME)
+        
         when {
             branch 'master'
             
