@@ -7,6 +7,9 @@ pipeline
                 {
                 steps {echo "thefirststage" 
                 }
+                when {
+                    branch 'master'
+                }
                 }
         
         stage ("second stage") 
