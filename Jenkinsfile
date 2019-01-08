@@ -4,7 +4,7 @@ pipeline {
     stage('firststage') {
       steps {
         echo 'thefirststage'
-        sh 'echo "${JAVA_HOME}"'
+        echo "${JAVA_HOME}"
       }
     }
     stage('second stage') {
