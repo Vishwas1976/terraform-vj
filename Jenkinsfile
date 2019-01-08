@@ -6,10 +6,10 @@ pipeline {
         echo 'thefirststage'
         echo "${JAVA_HOME}"
         withEnv(overrides: JAVA_HOME)
-        when {
-            branch 'master'
-            
+        when() {
+          branch 'master'
         }
+
       }
     }
     stage('second stage') {
