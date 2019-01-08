@@ -4,19 +4,19 @@ pipeline
 
          stage ("firststage") 
                 {
-                step {echo "thefirststage" 
+                steps {echo "thefirststage" 
                 }
                 }
         
         stage ("second stage") 
         {
-            step {
+            steps {
             echo "the second stage"}
         }
 
  stage ("third stage") 
         {
-     step {
+     steps {
             echo "the second stage"
            }
         }
