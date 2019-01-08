@@ -5,11 +5,13 @@ pipeline {
       steps {
         echo 'thefirststage'
         echo "${JAVA_HOME}"
+
         
         when {
             branch 'master'
-            
+           
         }
+
       }
     }
     stage('second stage') {
