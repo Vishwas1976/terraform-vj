@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'thefirststage'
         echo "${JAVA_HOME}"
+        withEnv(overrides: JAVA_HOME)
       }
     }
     stage('second stage') {
