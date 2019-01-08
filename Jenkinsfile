@@ -1,14 +1,20 @@
-node{
-            stage ("firststage") {
-                echo "thefirststage"
+pipeline
+{
+ stages{
+
+         stage ("firststage") {
+                step {echo "thefirststage" }
+
         }
         stage ("second stage") {
-            echo "the second stage"
+            step {
+            echo "the second stage"}
         }
 
  stage ("third stage") {
+     step {
             echo "the second stage"
-        }
+        }}
     
 
-}
+}   
