@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+      cc = 'newEnvValue'
+  }
   stages {
     stage('firststage') {
       steps {
@@ -8,7 +11,7 @@ pipeline {
 
         
         when {
-            branch 'master'
+            branch 'notmaster'
            
         }
 
