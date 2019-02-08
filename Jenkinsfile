@@ -8,15 +8,8 @@ pipeline {
       steps {
         echo 'thefirststage'
         echo "${JAVA_HOME}"
-
-
-        
-        when {
+       when {
             branch 'notmaster'
-           
-
-
-
       }
     }
     stage('second stage') {

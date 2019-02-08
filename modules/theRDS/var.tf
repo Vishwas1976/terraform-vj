@@ -1,0 +1,6 @@
+variable "pass" {
+    
+    type = "string"
+}
+
+
